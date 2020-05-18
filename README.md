@@ -30,3 +30,9 @@ def get(dictionary, key, default=Nil):
 get({}, 'key')  # raises KeyError
 get({}, 'key', None)  # returns None
 ```
+
+### Installation
+
+```sh
+pip3 install niltype
+```
