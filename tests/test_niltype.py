@@ -1,6 +1,8 @@
+from typing import Union
+
 from pytest import raises
 
-from niltype import Nil, NilType
+from niltype import Nil, Nilable, NilType
 
 
 def test_nil_str():
@@ -50,3 +52,7 @@ def test_final():
         class _NilType(NilType):
             pass
     assert str(e.value) == "'NilType' is final"
+
+
+def test_nilable():
+    assert Nilable[int] == Union[int, NilType]
