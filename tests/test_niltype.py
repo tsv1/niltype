@@ -11,6 +11,10 @@ def test_nil_repr():
     assert repr(Nil) == "Nil"
 
 
+def test_bool():
+    assert not Nil
+
+
 def test_nil_identity():
     assert Nil is Nil
 
