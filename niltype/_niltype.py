@@ -1,28 +1,30 @@
-from typing import Any, Dict
+from enum import Enum
+from typing import Any
 
 __all__ = ("NilType",)
 
 
-class _Singleton(type):
-    _instances: Dict[Any, "_Singleton"] = {}
-
-    def __call__(cls, *args: Any, **kwargs: Any) -> "_Singleton":
-        if cls not in cls._instances:
-            cls._instances[cls] = super().__call__(*args, **kwargs)
-        return cls._instances[cls]
-
-
-class NilType(metaclass=_Singleton):
-    __slots__ = ()
-
+class _Nil:
     def __str__(self) -> str:
         return "Nil"
 
     def __repr__(self) -> str:
         return str(self)
 
+
+class NilType(Enum):
+    _nil = _Nil()
+
+    def __str__(self) -> str:
+        return str(self.value)
+
+    def __repr__(self) -> str:
+        return repr(self.value)
+
     def __bool__(self) -> bool:
         return False
 
-    def __init_subclass__(cls, **kwargs: Any) -> None:
-        raise TypeError("'NilType' is final")
+    def __setattr__(self, key: str, value: Any) -> None:
+        if not key.startswith("_"):
+            raise AttributeError(f"{self.__class__.__name__!r} object has no attribute {key!r}")
+        super().__setattr__(key, value)
