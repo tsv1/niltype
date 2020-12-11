@@ -13,7 +13,7 @@ def find_dev_required():
 
 setup(
     name="niltype",
-    version="0.2.0",
+    version="0.3.0",
     description="Like a None",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
