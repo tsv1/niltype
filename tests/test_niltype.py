@@ -17,8 +17,18 @@ def test_bool():
     assert not Nil
 
 
+def test_nil_isinstance():
+    assert isinstance(Nil, NilType)
+    assert not isinstance(Nil, type(None))
+
+
+def test_nil_type():
+    assert type(Nil) is NilType
+
+
 def test_nil_identity():
     assert Nil is Nil
+    assert Nil is not None
 
 
 def test_nil_eq():
@@ -43,15 +53,11 @@ def test_call():
     assert str(e.value) == "'NilType' object is not callable"
 
 
-def test_singleton():
-    assert NilType() == NilType()
-
-
 def test_final():
     with raises(TypeError) as e:
         class _NilType(NilType):
             pass
-    assert str(e.value) == "'NilType' is final"
+    assert e.type is TypeError
 
 
 def test_nilable():

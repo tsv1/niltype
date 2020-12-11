@@ -5,4 +5,4 @@ from ._version import version
 __version__ = version
 __all__ = ("Nil", "NilType", "Nilable",)
 
-Nil = NilType()
+Nil = NilType._nil
