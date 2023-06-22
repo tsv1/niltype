@@ -1,6 +1,6 @@
 # Nil Type
 
-[![Codecov](https://img.shields.io/codecov/c/github/nikitanovosibirsk/niltype/master.svg?style=flat-square)](https://codecov.io/gh/nikitanovosibirsk/niltype)
+[![Codecov](https://img.shields.io/codecov/c/github/tsv1/niltype/master.svg?style=flat-square)](https://codecov.io/gh/tsv1/niltype)
 [![PyPI](https://img.shields.io/pypi/v/niltype.svg?style=flat-square)](https://pypi.python.org/pypi/niltype/)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/niltype?style=flat-square)](https://pypi.python.org/pypi/niltype/)
 [![Python Version](https://img.shields.io/pypi/pyversions/niltype.svg?style=flat-square)](https://pypi.python.org/pypi/niltype/)
