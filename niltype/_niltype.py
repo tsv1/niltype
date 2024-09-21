@@ -69,7 +69,8 @@ class NilType(Enum):
 
         :param key: The attribute name to set.
         :param value: The value to assign to the attribute.
-        :raises AttributeError: If attempting to set any attribute that does not start with an underscore.
+        :raises AttributeError: If attempting to set any attribute that does not start
+                                with an underscore.
         """
         if not key.startswith("_"):
             raise AttributeError(f"{self.__class__.__name__!r} object has no attribute {key!r}")
