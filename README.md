@@ -1,5 +1,10 @@
 # NilType
 
+[![Codecov](https://img.shields.io/codecov/c/github/tsv1/niltype/master.svg?style=flat-square)](https://codecov.io/gh/tsv1/niltype)
+[![PyPI](https://img.shields.io/pypi/v/niltype.svg?style=flat-square)](https://pypi.python.org/pypi/niltype/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/niltype?style=flat-square)](https://pypi.python.org/pypi/niltype/)
+[![Python Version](https://img.shields.io/pypi/pyversions/niltype.svg?style=flat-square)](https://pypi.python.org/pypi/niltype/)
+
 **NilType** is a Python package that provides a `Nil` singleton object to represent a null or missing value in situations where `None` is a valid data value and cannot be used to signify the absence of data. This is especially useful in data models or functions where `None` might be a meaningful value, and a distinct placeholder is needed to indicate 'no value' or 'missing data'.
 
 ## Installation
