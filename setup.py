@@ -14,7 +14,7 @@ def find_dev_required():
 setup(
     name="niltype",
     version="1.0.0",
-    description="Like a None",
+    description="A singleton Nil object to represent missing values when None is a valid data value",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     author="Nikita Tsvetkov",
